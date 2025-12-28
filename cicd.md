@@ -1,0 +1,38 @@
+# Folders
+
+     .github/workflows
+
+# File; Name can be chosen
+
+      test.yml
+
+# Name
+
+     name: Test Project
+
+# Trigger
+
+    on:push
+
+# jobs:
+
+# steps
+
+# action/Run
+
+      name:Test Project
+      on:push
+      jobs:
+         test:
+            runs-on: ubuntu-latest
+            steps:
+               -  name: Get Code.
+                  uses: actions/checkout@v3
+               -  name: Install NodeJS
+                  uses: actions/setup-node@v3
+                  with:
+                     node-version: 18
+               -  name: Install dependencies
+                  run:  npm ci
+               - name:  Run tests
+                 run:   npm test

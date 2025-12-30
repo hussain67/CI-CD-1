@@ -36,3 +36,25 @@
                   run:  npm ci
                - name:  Run tests
                  run:   npm test
+
+<!--
+name: Deployment Exercise 1
+on: push
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Test Code
+        run: npm run test
+      - name: Build Code
+        run: npm run build
+      - name: Deploy Code
+        run: echo " Deploying..."
+
+ -->

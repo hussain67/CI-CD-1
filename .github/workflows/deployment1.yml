@@ -1,7 +1,7 @@
-name: Deployment Exercise 1
+name: CI
 on: push
 jobs:
-  deployment:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
